@@ -1,0 +1,12 @@
+.test1{
+    max-width: 1050px;
+    margin:0 auto;
+    padding: 20px;
+    border: 5px solid brown;
+    background-color: beige;
+    box-shadow: 0 0 0 20px #F9F4ED;
+}
+.test2{
+        background-color:salmon
+    }
+}

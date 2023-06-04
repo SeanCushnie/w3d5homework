@@ -1,13 +1,20 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styleindex.css') }}">
 <html>
 <head>
+<div class="test1"> 
     <title>
         My Library Book
     </title>
+    
 </head>
+<div class="test2">  
 <body>
     <h1>My Library Book </h1>
     <p> Book Title: {{book.title}}</p>
     <p> Book Author: {{book.author}}</p>
     <p> Book Genre: {{book.genre}}</p>
     <p> Book Checked Out? : {{book.checked_out}}</p>
+</body>
+</div>
+</div>
 </html>
