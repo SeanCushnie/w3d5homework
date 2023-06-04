@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styleindex.css') }}">
+{% extends "base.html" %}
+
+{% block content %}
+<div class="test1">
+    <form action="/" method="POST">
+        <label for="title of book">Title of Book:</label>
+        <input type="text" id="title" name="title">
+        <label for="author">Author's Name:</label>
+        <input type="text" id="author" name="author">
+        <label for="genre">Book Genre:</label>
+        <textarea name="genre" id="genre" rows="2" cols="30"></textarea>
+        <label for="checked out">Checked Out?</label>
+        <input type="checkbox" name="checked_out" id="checked_out">
+        <input type="submit" value="Add Book">
+    </form>
+    <h1>Books</h1>
+    {% for book in book_list %}
+    <div class="test2">
+        <h2>{{ book.title }} : {{ book.author }} : {{ book.genre }}</h2>
+        {% if book.checked_out %}
+        <section>
+            <p><i>Checked Out</i></p>
+        </section>
+        {% else %}
+        <div>
+            <p><i>Not Checked Out</i></p>
+        </div>
+        {% endif %}
+        <a href="/books/{{ book_list.index(book) }}">Show Book</a>
+        <div>
+            <form class="form-inline" action="/books/del/{{ book_list.index(book) }}" method="POST">
+                <input type="submit" value="Delete by Index">
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
