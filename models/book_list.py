@@ -1,9 +1,12 @@
 from models.book import *
 
-book1 = Book("The Hound of the Baskervilles", "Sir Arthur Conan Doyle", "Horror", True)
-book2 = Book("The Outsider", "Stephen King", "Horror / Thriller", False)
+book1 = Book("'Salmon'", "Whiskers, The Cat", "Non-Fiction", True)
+book2 = Book("'Salmon 2'", "Whiskers, The Cat", "Non-Fiction", True)
+book3 = Book("'Salmon 3: With a Vengeance'", "Whiskers, The Cat", "Fiction", False)
+book4 = Book("'Salmon 4: Live Free or Cat Hard'", "Whiskers, The Cat", "Fiction", False)
+book5 = Book("'Salmon 5: A Good Day to Cat Hard'", "Whiskers, The Cat", "Fiction", False)
 
-book_list = [book1, book2]
+book_list = [book1, book2, book3, book4, book5]
 
 def add_new_book(book):
     book_list.append(book)
